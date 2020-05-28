@@ -84,7 +84,7 @@ public class PlayerCharacterController : MonoBehaviour
         iterattext = GameObject.FindGameObjectWithTag("IteratText").GetComponent<Text>();
         Inventory.SetActive(false);
         ChestSlot.SetActive(false);
-        iterattext.transform.parent.gameObject.SetActive(false);
+        iterattext.gameObject.SetActive(false);
         gageUI.enabled = false;
 
         hp = PlayerDefaultInfo.hpMax;
@@ -93,7 +93,7 @@ public class PlayerCharacterController : MonoBehaviour
         sta = PlayerDefaultInfo.sta;
         stv = PlayerDefaultInfo.stv;
 
-        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").transform.GetChild(0).gameObject;
+        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").gameObject;
     }
     // Start is called before the first frame update
     void Start()
@@ -139,7 +139,7 @@ public class PlayerCharacterController : MonoBehaviour
             IteratScript.ChangeShader(false);
             IteractItem = null;
             IteratScript = null;
-            iterattext.transform.parent.gameObject.SetActive(false);
+            iterattext.gameObject.SetActive(false);
             isIterating = false;
         }
 
@@ -171,7 +171,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     public void TexTOut()
     {
-        iterattext.transform.parent.gameObject.SetActive(true);
+        iterattext.gameObject.SetActive(true);
         iterattext.text = "F를 길게 눌러 " + IteratScript.types;
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/UImake/Resources/Scenes/0_StartSplashScene.unity
+- path: Assets/Scenes/MasterScene.unity
   isLoaded: 1
   isActive: 1

@@ -19,7 +19,7 @@ public class FixedInvenSlotClass : MonoBehaviour, IDropHandler
     private void Awake()
     {
         isEnable = true;
-        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").transform.GetChild(0).gameObject;
+        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").gameObject;
     }
 
     public void OnDrop(PointerEventData eventData)

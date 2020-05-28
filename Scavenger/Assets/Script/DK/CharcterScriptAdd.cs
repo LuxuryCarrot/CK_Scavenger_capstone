@@ -10,7 +10,7 @@ public class CharcterScriptAdd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlumPhone = GameObject.FindGameObjectWithTag("PlumPhone");
+       
 
         PlumPhone.SetActive(false);
     }

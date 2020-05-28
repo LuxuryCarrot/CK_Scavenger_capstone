@@ -21,7 +21,7 @@ public class ItemPortableLocker : ItemLocker
             lockerAnim.enabled = false;
         iteratTime = 3.0f;
         isOpened = false;
-        blickText = GameObject.FindGameObjectWithTag("BlickTextUI").transform.GetChild(0).gameObject;
+        blickText = GameObject.FindGameObjectWithTag("BlickTextUI").gameObject;
         chestSlot = GameObject.FindGameObjectWithTag("ChestSlot").transform.GetChild(0).GetChild(0).gameObject;
         if (range == 0)
             range = 2;

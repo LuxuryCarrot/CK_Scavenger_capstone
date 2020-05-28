@@ -15,7 +15,7 @@ public class RemindEvent : EventVisualParent
         manager = GameObject.FindGameObjectWithTag("Stage").GetComponent<StageManager>();
         isHappened = false;
 
-        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").transform.GetChild(0).gameObject;
+        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").gameObject;
 
         
     }

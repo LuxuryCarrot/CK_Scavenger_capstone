@@ -14,7 +14,7 @@ public class InstanceEvent : EventVisualParent
         manager = GameObject.FindGameObjectWithTag("Stage").GetComponent<StageManager>();
         isHappened = false;
 
-        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").transform.GetChild(0).gameObject;
+        blinkText = GameObject.FindGameObjectWithTag("BlickTextUI").gameObject;
 
         limTime = 2.0f;
     }

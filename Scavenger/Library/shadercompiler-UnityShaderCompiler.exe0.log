@@ -1,3 +1,21 @@
-Base path: C:/Program Files/UnityVersion/2018.4.22f1/Editor/Data
+Base path: C:/Program Files/Unity/Hub/Editor/2018.4.22f1/Editor/Data
+Cmd: initializeCompiler
+Cmd: preprocess
+  error: 1 plat 21 at (0): texcoord1 missing from surface shader's vertex input struct (appdata), disabled lightmaps and meta pass generation
+  error: 1 plat 21 at (0): texcoord2 missing from surface shader's vertex input struct (appdata), disabled dynamic GI and meta pass generation
+  insize=1184 outsize=2525 ok=1
+Cmd: preprocess
+  insize=1166 outsize=1055 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
