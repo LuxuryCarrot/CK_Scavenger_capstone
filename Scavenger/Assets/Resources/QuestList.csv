@@ -1,0 +1,3 @@
+﻿quest_index,quest_code,quest_name,disaster_type,quest_contents,quest_item1,quest_item2,quest_item3,quest_item4,quest_item5,quest_dialogue_min,quest_dialogue_max
+0,null,null,null,null,0,0,0,0,0,0,0
+1,No.001,행복구 푸름 아파트 물품회수,화재,사건번호 No.001<br>OO구 XX아파트 물품회수<br>접수일자 : 20XX년 05월 02일<br><br><b>재난유형 : 화재(긴급)</b><br><br>의뢰품 목록<br>1순위<br>초록색 통장 - 안방 TV 밑 서랍장<br>인감 - 안방(그 외 위치 불명)<br><br>USB - 서재 컴퓨터(그 외 위치 불명)<br><br><br>그 외 <br>현금을 최대한 회수 할 것<br><br>타임라인<br>XX시 XX분<br>OO구 2블록 XX아파트 1층에서 화재발생.<br>XX시 XX분<br>119접수. OO구 관할 소방서 화<br>진압출동. <br>XX시 XX분 - 현재<br>화재 진압 중. 인명 피해 없음. 주민 퇴거 완료. <br><br>주의사항<br>목조가구가 많으므로 시간지체에 따른 물품손실을 주의할 것.<br>유독가스에 주의할 것.<br>,1,2,3,0,0,1,25
