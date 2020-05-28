@@ -19,7 +19,7 @@ public class ChestSlotManager : MonoBehaviour
         
         player.isIterating = false;
         
-        player.GetComponent<PlayerCollect>().getTime=0;
+        
         player.anim.SetInteger("Run", 0);
         
         if (player.Inventory.activeInHierarchy)

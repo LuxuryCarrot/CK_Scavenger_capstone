@@ -13,7 +13,7 @@ public class PlayerPush : PlayerParent
         base.BeginState();
         manager.anim.SetInteger("Run", 0);
         manager.anim.SetInteger("Push", 1);
-        delay = 0;
+        
         //transform.GetChild(0).transform.rotation = Quaternion.Euler(0, manager.IteractItem.transform.rotation.z*180, 0);
         //pivot = manager.IteractItem.transform.position + 
         //    new Vector3(5* Mathf.Sin(manager.IteractItem.transform.rotation.z*3 * Mathf.Deg2Rad)
@@ -29,12 +29,9 @@ public class PlayerPush : PlayerParent
         {
 
             manager.sta -= 5 * Time.deltaTime;
-            if (delay<=0.5f)
-            {
-                delay += Time.deltaTime;
+            
                 transform.position -= new Vector3(0.8f, 0, 0) * Time.deltaTime;
-                return;
-            }
+            
 
             
 
@@ -60,13 +57,13 @@ public class PlayerPush : PlayerParent
             {
                 manager.IteractItem.GetComponent<ItemMovement>().isIterat = false;
                 manager.anim.SetInteger("Push", 0);
-                manager.SetState(States.IDLE);
+                manager.SetState(States.DELAY);
             }
         }
         else
         {
             manager.anim.SetInteger("Push", 0);
-            manager.SetState(States.IDLE);
+            manager.SetState(States.DELAY);
         }
     }
     public override void EndState()

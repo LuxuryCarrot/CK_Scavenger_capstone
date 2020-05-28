@@ -11,14 +11,13 @@ public class PlayerIdle : PlayerParent
     public override void BeginState()
     {
         base.BeginState();
-        manager.anim.SetInteger("Run", 0);
-        stopMove = false;
+        //manager.anim.SetInteger("Run", 0);
+        
     }
 
     private void Update()
     {
-        if (stopMove)
-            return;
+        
         //if(Input.GetKey(KeyCode.RightArrow))
         //   transform.GetChild(0).rotation = Quaternion.LookRotation(new Vector3(1, 0, 0), new Vector3(0, 1, 0));
 

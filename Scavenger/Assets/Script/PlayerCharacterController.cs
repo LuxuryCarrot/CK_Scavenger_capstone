@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public enum States
 {
     IDLE=0,
+    RUN,
     PUSH,
     CLIME,
     COLLECT,
     INTRO,
     DIE,
-    DOOR
+    DOOR,
+    DELAY
 }
 [RequireComponent(typeof(CharacterController))]
 public class PlayerCharacterController : MonoBehaviour
@@ -70,6 +72,7 @@ public class PlayerCharacterController : MonoBehaviour
         StateList.Add(States.INTRO, GetComponent<PlayerIntro>());
         StateList.Add(States.DIE, GetComponent<PlayerDie>());
         StateList.Add(States.DOOR, GetComponent<PlayerDoor>());
+        StateList.Add(States.DELAY, GetComponent<PlayerDelay>());
 
         anim = GetComponentInChildren<Animator>();
 

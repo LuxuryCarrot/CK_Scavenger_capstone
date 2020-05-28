@@ -42,7 +42,7 @@ public class RoomMoveEvent : EventVisualParent
             isHappened = true;
             player.GetComponent<PlayerCharacterController>().SetState(States.IDLE);
             player.GetComponent<PlayerCharacterController>().anim.SetInteger("Run", 1);
-            player.GetComponent<PlayerIdle>().stopMove = true;
+            
             Vector3 possessPos = usingCam.transform.position;
             Vector3 possessRot = usingCam.transform.rotation.eulerAngles;
             Debug.Log("Possess");
@@ -78,7 +78,7 @@ public class RoomMoveEvent : EventVisualParent
 
         if(temp<=0)
         {
-            player.GetComponent<PlayerIdle>().stopMove = false;
+            
             player.GetComponent<PlayerCharacterController>().horizon = afterPlayerRotate;
             blendCam.gameObject.SetActive(false);
             destiCam.gameObject.SetActive(true);

@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class AnimGet : MonoBehaviour
 {
-    public void GetUp()
+    public void DelayEnd()
     {
-        GetComponentInParent<PlayerIdle>().stopMove = true;
-    }
-
-    public void EndSearch()
-    {
-        GetComponentInParent<PlayerIdle>().stopMove = false;
-        
+        GetComponentInParent<PlayerCharacterController>().SetState(States.IDLE);
     }
     public void DoorEnd()
     {

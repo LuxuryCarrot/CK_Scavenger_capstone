@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerCollect : PlayerParent
 {
     public float getTime;
-    public float delay;
+    
 
     public override void BeginState()
     {
         base.BeginState();
         getTime = 0;
         manager.anim.SetInteger("Run", 2);
-        delay = 0;
+        
         getTime += Time.deltaTime;
         //transform.GetChild(0).rotation = Quaternion.FromToRotation(new Vector3(transform.position.x, 0, transform.position.z), 
         //    new Vector3(manager.IteractItem.transform.position.x, 0 , manager.IteractItem.transform.position.z));
@@ -23,8 +23,7 @@ public class PlayerCollect : PlayerParent
     {
         if (getTime != 0)
             getTime += Time.deltaTime;
-        else
-            delay += Time.deltaTime;
+        
 
         if (manager.ChestSlot.activeInHierarchy)
         {
@@ -39,11 +38,11 @@ public class PlayerCollect : PlayerParent
         if (Input.GetKeyUp(KeyCode.F))
         {
             manager.anim.SetInteger("Run", 0);
-            
-            
-            
+
+            manager.gageUI.enabled = false;
+
             getTime = 0;
-            //manager.SetState(States.IDLE);
+            manager.SetState(States.DELAY);
         }
 
         if(getTime>=manager.IteractItem.GetComponent<ItemLocker>().iteratTime)
@@ -65,7 +64,7 @@ public class PlayerCollect : PlayerParent
                     manager.IteractItem.GetComponent<ItemPortableLocker>().GetAsItem();
                     manager.gageUI.enabled = false;
                     manager.anim.SetInteger("Run", 0);
-                    manager.SetState(States.IDLE);
+                    manager.SetState(States.DELAY);
                 }
             }
             else
@@ -80,20 +79,20 @@ public class PlayerCollect : PlayerParent
                 manager.IteractItem.GetComponent<ItemLocker>().InvenChange();
 
                 manager.Inventory.SetActive(true);
+                manager.SetState(States.DELAY);
             }
         }
         
-        if(delay>=1.5f)
-        {
-            manager.SetState(States.IDLE);
-        }
+        
+        
+        
         
     }
 
     public override void EndState()
     {
         base.EndState();
-        manager.anim.SetInteger("Run", 0);
+        getTime = 0;
         if(manager.IteractItem!=null)
             if(manager.IteractItem.GetComponent<Animator>()!=null)
             manager.IteractItem.GetComponent<Animator>().SetTrigger("Close");
