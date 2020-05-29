@@ -24,7 +24,8 @@ public class ItemMovement : ItemParent
         base.iteract();
         if(isIterat)
         {
-            player.GetComponent<PlayerCharacterController>().SetState(States.PUSH);
+            if(player.GetComponent<PlayerCharacterController>().current!=States.PUSH)
+               player.GetComponent<PlayerCharacterController>().SetState(States.PUSH);
         }
     }
     private void Update()

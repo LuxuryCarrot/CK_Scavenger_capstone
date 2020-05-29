@@ -138,8 +138,8 @@ public class FixedInvenSlotClass : MonoBehaviour, IDropHandler
         item.transform.parent = current.transform;
         item.GetComponent<RectTransform>().sizeDelta
             = new Vector2
-            (60 * item.GetComponent<ItemInInven>().width
-            , 60 * item.GetComponent<ItemInInven>().height);
+            (79 * item.GetComponent<ItemInInven>().width
+            , 79 * item.GetComponent<ItemInInven>().height);
 
         item.transform.localScale = new Vector3(1, 1, 1);
         item.transform.localPosition = new Vector3(-25 * (item.itemInfo.width - 1), 25 * (item.itemInfo.height - 1), 0);

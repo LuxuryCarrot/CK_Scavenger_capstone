@@ -925,9 +925,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.9224417
-  m_TransitionOffset: 0.043137513
-  m_ExitTime: 0.6898378
+  m_TransitionDuration: 0.8460138
+  m_TransitionOffset: 0
+  m_ExitTime: 0.7909474
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -1416,7 +1416,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Take 001
+  m_Name: ElecDie
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

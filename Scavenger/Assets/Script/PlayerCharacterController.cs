@@ -44,10 +44,12 @@ public class PlayerCharacterController : MonoBehaviour
 
     public Vector3 moveDirection = Vector3.zero;
 
-    Dictionary<States, PlayerParent> StateList = new Dictionary<States, PlayerParent>();
+    public Dictionary<States, PlayerParent> StateList = new Dictionary<States, PlayerParent>();
+    StageStatesParent stageStates;
 
     public CharacterController m_Controller;
     public Animator anim;
+    
 
     public States current;
     public bool isIterating=false;
@@ -64,15 +66,15 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void Awake()
     {
+        stageStates = GetComponent<StageStatesParent>();
         horizon = true;
         StateList.Add(States.IDLE, GetComponent<PlayerIdle>());
-        StateList.Add(States.PUSH, GetComponent<PlayerPush>());
-        StateList.Add(States.CLIME, GetComponent<PlayerClime>());
         StateList.Add(States.COLLECT, GetComponent<PlayerCollect>());
         StateList.Add(States.INTRO, GetComponent<PlayerIntro>());
         StateList.Add(States.DIE, GetComponent<PlayerDie>());
         StateList.Add(States.DOOR, GetComponent<PlayerDoor>());
         StateList.Add(States.DELAY, GetComponent<PlayerDelay>());
+        stageStates.StateSpawn();
 
         anim = GetComponentInChildren<Animator>();
 

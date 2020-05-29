@@ -7,9 +7,11 @@ public class PlayerPush : PlayerParent
 
     private float delay;
     //private Vector3 pivot;
+    
 
     public override void BeginState()
     {
+        delay = 0.5f;
         base.BeginState();
         manager.anim.SetInteger("Run", 0);
         manager.anim.SetInteger("Push", 1);
@@ -29,10 +31,13 @@ public class PlayerPush : PlayerParent
         {
 
             manager.sta -= 5 * Time.deltaTime;
-            
-                transform.position -= new Vector3(0.8f, 0, 0) * Time.deltaTime;
-            
 
+            if (delay > 0)
+            {
+                delay -= Time.deltaTime;
+                transform.position += new Vector3(manager.IteractItem.transform.position.x-manager.IteratScript.range+2-transform.position.x, 0, 0) * Time.deltaTime*2;
+                return;
+            }
             
 
             //manager.IteractItem.transform.Rotate(0, 0, -18 * Time.deltaTime);
@@ -69,6 +74,7 @@ public class PlayerPush : PlayerParent
     public override void EndState()
     {
         base.EndState();
+        delay = 0.5f;
     }
 
     public Vector3 AngleMove(Vector3 p, Vector3 vec, float angle)
