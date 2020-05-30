@@ -87,7 +87,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 621b4d1d34c8cdc4c8af92077b1cbf07, type: 3}
+  - {fileID: 2100000, guid: dca2d87d2efaedc4c8c2566fab0b139e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 621b4d1d34c8cdc4c8af92077b1cbf07, type: 3}
+  - {fileID: 2100000, guid: dca2d87d2efaedc4c8c2566fab0b139e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,12 +331,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402c2103c378e47478e16c4412f952c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  types: 
   iteratTime: 0
   range: 0
   lockerAnim: {fileID: 0}
   isOpened: 0
+  blickText: {fileID: 0}
   chestSlot: {fileID: 0}
   items: []
   prefab: {fileID: 0}
   isiterat: 0
+  deleteKey: {fileID: 0}
+  width: 0
+  height: 0
   key: 
