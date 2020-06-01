@@ -10,7 +10,7 @@ public class PlayerDoor : PlayerParent
         base.BeginState();
         manager.anim.SetInteger("Run", 0);
         manager.anim.SetBool("Door", true);
-        Camera.main.GetComponent<CameraMove>().enabled = false;
+        //Camera.main.GetComponent<CameraMove>().enabled = false;
         temp = 3.0f;
     }
 
@@ -18,7 +18,7 @@ public class PlayerDoor : PlayerParent
     {
         
         temp -= Time.deltaTime;
-        Camera.main.transform.position += new Vector3(1, 0, 0) * Time.deltaTime;
+        //Camera.main.transform.position += new Vector3(1, 0, 0) * Time.deltaTime;
         if(temp <=0)
         {
             manager.SetState(States.IDLE);
@@ -32,9 +32,9 @@ public class PlayerDoor : PlayerParent
         if(temp<=0)
         {
             temp = 3.0f;
-            manager.transform.position += new Vector3(3, 0, 0);
+            //manager.transform.position += new Vector3(3, 0, 0);
             
-            Camera.main.GetComponent<CameraMove>().enabled = true;
+            //Camera.main.GetComponent<CameraMove>().enabled = true;
         }
     }
 }

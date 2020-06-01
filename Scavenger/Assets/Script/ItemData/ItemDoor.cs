@@ -36,7 +36,7 @@ public class ItemDoor : ItemParent
             temp += Time.deltaTime;
             if(temp>=1.5f)
             {
-                GetComponentInParent<BoxCollider>().enabled = false;
+                //GetComponentInParent<BoxCollider>().enabled = false;
             }
         }
 

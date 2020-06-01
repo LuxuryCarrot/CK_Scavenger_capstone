@@ -31,7 +31,7 @@ public class CamMoveZ : MonoBehaviour
         //transform.rotation = Quaternion.Euler(12- player.transform.position.z*1.0f, 0,0);
 
         transform.position = new Vector3(xpos + player.transform.position.x,
-            player.position.y + 1.2f, player.transform.position.z);
+            player.position.y + 1.0f, player.transform.position.z);
         transform.rotation = Quaternion.Euler(0, -90, 0);
     }
 }
