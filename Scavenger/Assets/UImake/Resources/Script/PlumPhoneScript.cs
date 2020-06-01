@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlumPhoneScript : MonoBehaviour
 {
     public GameObject PlumPhone;
-    public GameObject PlumPhone_Exit_Button;
 
     public GameObject PlumTalk_Button;
     public GameObject PlumTalk_Panel;
@@ -61,7 +60,6 @@ public class PlumPhoneScript : MonoBehaviour
         {
             RMHS_Button.SetActive(false);
             Quest_Accept_Button.SetActive(false);
-            PlumPhone_Exit_Button.SetActive(true);
         }
         else
         {
