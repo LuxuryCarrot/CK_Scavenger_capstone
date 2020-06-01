@@ -30,7 +30,7 @@ public class RoomMoveEvent : EventVisualParent
         isHappened = false;
         opened = false;
         temp = 2.0f;
-        Debug.Log(transform.position);
+        
         
     }
     public override void Execute()

@@ -16,10 +16,15 @@ public class PlayerWalk : PlayerParent
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
             manager.SetState(States.IDLE);
 
-        if (manager.horizon)
-            manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 4;
-        else
-            manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 4;
+        //if (manager.horizon)
+        //    manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 4;
+        //else
+        //    manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 4;
+
+        if (Input.GetAxis("Horizontal") >= 0)
+            manager.moveDirection = manager.rightPos/4;
+        else if (Input.GetAxis("Horizontal") <0)
+            manager.moveDirection = manager.leftPos/4;
 
         if (manager.moveDirection != Vector3.zero)
         {

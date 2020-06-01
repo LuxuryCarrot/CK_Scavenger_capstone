@@ -24,7 +24,7 @@ public class ItemParent : MonoBehaviour
 
     public void ChangeShader(bool isApproach)
     {
-        Debug.Log(Resources.Load("Shader/OutLine"));
+        
         MeshRenderer mesh = GetComponentInChildren<MeshRenderer>();
         if(mesh!=null)
         {

@@ -113,7 +113,7 @@ public class PlumPhoneScript : MonoBehaviour
 
     public void Quest_Set()
     {
-        Debug.Log("Quest_Setting... ");
+        
         int a = 0;
         for (int i = 1; i <= CSVLoader.instance.m_Quest.Count; i++)
         {

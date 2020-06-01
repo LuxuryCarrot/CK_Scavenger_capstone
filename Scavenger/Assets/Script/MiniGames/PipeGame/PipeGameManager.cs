@@ -10,6 +10,7 @@ public class PipeGameManager : MonoBehaviour
     public int width;
     public int height;
     public Transform gameField;
+    
 
     private void Awake()
     {

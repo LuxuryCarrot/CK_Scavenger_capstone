@@ -25,10 +25,15 @@ public class PlayerRun : PlayerParent
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
             manager.SetState(States.IDLE);
 
-        if (manager.horizon)
-            manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 2;
-        else
-            manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 2;
+        //if (manager.horizon)
+        //    manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 2;
+        //else
+        //    manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 2;
+
+        if (Input.GetAxis("Horizontal") >= 0)
+            manager.moveDirection = manager.rightPos / 2;
+        else if (Input.GetAxis("Horizontal") < 0)
+            manager.moveDirection = manager.leftPos / 2;
 
         if (manager.moveDirection != Vector3.zero)
         {

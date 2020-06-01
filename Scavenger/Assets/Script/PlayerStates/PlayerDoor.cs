@@ -33,7 +33,7 @@ public class PlayerDoor : PlayerParent
         {
             temp = 3.0f;
             manager.transform.position += new Vector3(3, 0, 0);
-            Debug.Log("Moved");
+            
             Camera.main.GetComponent<CameraMove>().enabled = true;
         }
     }

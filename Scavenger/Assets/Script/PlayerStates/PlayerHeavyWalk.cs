@@ -9,17 +9,22 @@ public class PlayerHeavyWalk : PlayerParent
     public override void BeginState()
     {
         base.BeginState();
-        manager.anim.SetInteger("Run", 5);
+        manager.anim.SetInteger("Run", 5); 
     }
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
             manager.SetState(States.IDLE);
 
-        if (manager.horizon)
-            manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 8;
-        else
-            manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 8;
+        //if (manager.horizon)
+        //    manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0) / 8;
+        //else
+        //    manager.moveDirection = new Vector3(0, 0.0f, Input.GetAxis("Horizontal")) / 8;
+
+        if (Input.GetAxis("Horizontal") >= 0)
+            manager.moveDirection = manager.rightPos / 8;
+        else if (Input.GetAxis("Horizontal") < 0)
+            manager.moveDirection = manager.leftPos / 8;
 
         if (manager.moveDirection != Vector3.zero)
         {

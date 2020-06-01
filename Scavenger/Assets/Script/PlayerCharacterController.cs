@@ -21,6 +21,8 @@ public enum States
 [RequireComponent(typeof(CharacterController))]
 public class PlayerCharacterController : MonoBehaviour
 {
+
+    public static PlayerCharacterController playerSingleton;
     public float speed = 10.0f;
     public float jummpSpeed = 8.0f;
     public float gravity = 20.0f;
@@ -45,6 +47,8 @@ public class PlayerCharacterController : MonoBehaviour
     public GameObject gage;
 
     public Vector3 moveDirection = Vector3.zero;
+    public Vector3 rightPos;
+    public Vector3 leftPos;
 
     public Dictionary<States, PlayerParent> StateList = new Dictionary<States, PlayerParent>();
     StageStatesParent stageStates;
@@ -68,6 +72,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void Awake()
     {
+        if (playerSingleton == null)
+            playerSingleton = this;
         stageStates = GetComponent<StageStatesParent>();
         horizon = true;
         StateList.Add(States.IDLE, GetComponent<PlayerIdle>());
@@ -155,7 +161,7 @@ public class PlayerCharacterController : MonoBehaviour
 
         if (!isIterating && IteractItem != null && Input.GetKeyDown(KeyCode.F) && !Inventory.activeInHierarchy)
         {
-            Debug.Log("GET!!");
+            
             isIterating = true;
             IteractItem.GetComponent<ItemParent>().iteract();
             
