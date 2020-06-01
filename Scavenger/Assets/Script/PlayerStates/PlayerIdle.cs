@@ -14,7 +14,7 @@ public class PlayerIdle : PlayerParent
         manager.anim.SetInteger("Run", 0);
         if (InventoryManager.weight >= InventoryManager.weightLimit * 0.8f)
             manager.anim.SetInteger("Heavy", 1);
-        
+        stopMove = false;
     }
 
     private void Update()
@@ -25,9 +25,10 @@ public class PlayerIdle : PlayerParent
                 manager.SetState(States.RUN);
         }
 
-        if (Random.Range(0, 300) <= 0.25f)
+        if (Random.Range(0, 300) <= 0.125f )
         {
             manager.anim.SetTrigger("Random");
+            
             manager.anim.SetFloat("RandomSeed", Random.Range(0, 10));
         }
         //    if(manager.horizon)

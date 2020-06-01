@@ -55,7 +55,7 @@ public class PlayerRun : PlayerParent
 
         if(Random.Range(0, 300)<=0.25f)
         {
-            manager.anim.SetTrigger("Random");
+            manager.anim.SetTrigger("RandomRun");
         }
 
         manager.moveDirection = Vector3.zero;
