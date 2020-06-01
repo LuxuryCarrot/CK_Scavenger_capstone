@@ -1,0 +1,23 @@
+날짜설정: 나눔스퀘어 regular 48pt 색:a9c5d0
+
+아이콘 이름: 나눔스퀘어 regular 16pt 색:ffffff
+
+
+<플럼톡부분>
+총3건의 메세지가 도착했습니다: 나눔스퀘어 ExtraBold 20pt 색:bdfff2
+
+사건번호:나눔스퀘어 Bold 16pt 색:5d958a
+
+oo구xx아파트 물품회수:나눔스퀘어 Bold 20pt 색:067b64
+
+
+<왼쪽 팝업창>
+
+제목부분(행복구 푸름아파트~):나눔스퀘어 Bold 30pt 색:ebf3fb
+사건번호:나눔스퀘어 Regular 28pt 색:fafcfd
+의뢰품목록/1순위/그외:나눔스퀘어 regular 23pt 색:fafcfd
+본문:나눔스퀘어 Light 23pt 색:fafcfd
+
+통화하기:나눔스퀘어 ExtraBold 26pt 색:fde24d
+
+

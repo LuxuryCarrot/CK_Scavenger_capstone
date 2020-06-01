@@ -22,8 +22,6 @@ public class PlumPhoneScript : MonoBehaviour
 
     public GameObject Quest_Panel;
 
-    public GameObject QuestDialogue_Panel;
-
     public Text Quest_Main_Title_Text;
     public Text Quest_Num_Title_Text;
     public Text Quest_Contents_Text;
@@ -69,7 +67,6 @@ public class PlumPhoneScript : MonoBehaviour
         {
             RMHS_Button.SetActive(true);
             Quest_Accept_Button.SetActive(true);
-            PlumPhone_Exit_Button.SetActive(false);
         }
         RMHS_Panel.SetActive(false);
 
@@ -114,12 +111,12 @@ public class PlumPhoneScript : MonoBehaviour
     public void Quest_Set()
     {
         
-        int a = 0;
+        int a = -13;
         for (int i = 1; i <= CSVLoader.instance.m_Quest.Count; i++)
         {
             GameObject button = (GameObject)Instantiate(Quest_Button, QuestConten);
             button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y + a, button.transform.position.z);
-            a -= 85;
+            a -= 125;
             button.transform.SetParent(QuestConten);
             button.transform.localScale = new Vector3(1, 1, 1);
 
