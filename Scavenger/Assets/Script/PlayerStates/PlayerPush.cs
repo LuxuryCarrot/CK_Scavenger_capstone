@@ -35,7 +35,7 @@ public class PlayerPush : PlayerParent
             if (delay > 0)
             {
                 delay -= Time.deltaTime;
-                transform.position += new Vector3(manager.IteractItem.transform.position.x-manager.IteratScript.range+2-transform.position.x, 0, 0) * Time.deltaTime*2;
+                transform.position += new Vector3(manager.IteractItem.transform.position.x-manager.IteratScript.range+1.4f-transform.position.x, 0, 0) * Time.deltaTime*2;
                 return;
             }
             

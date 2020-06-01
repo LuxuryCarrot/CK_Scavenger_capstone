@@ -43,6 +43,7 @@ public class Stage1Intro : IntroVisualParent
             player.transform.position = new Vector3(-22, 1.08f, 0.9583f);
 
             manager.SetState(StageState.IDLE);
+            return;
         }
 
         temp -= Time.deltaTime;

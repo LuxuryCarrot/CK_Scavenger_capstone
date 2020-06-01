@@ -29,6 +29,11 @@ public class Menu_Button : MonoBehaviour
         Caution_QLog_Panel.SetActive(false);
         Caution_Setting_Panel.SetActive(false);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Menu_Pressed();
+    }
 
     public void Menu_Pressed()
     {

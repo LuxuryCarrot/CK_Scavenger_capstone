@@ -18,7 +18,7 @@ public class CharcterScriptAdd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if (!PlumPhone.activeInHierarchy)
                 PlumPhone.SetActive(true);

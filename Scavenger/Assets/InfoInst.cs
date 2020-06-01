@@ -29,7 +29,7 @@ public class InfoInst : MonoBehaviour
             itemWidth.Add("BankBook", 1);
         itemWidth.Add("Locker1", 3);
         itemWidth.Add("Steak", 2);
-        itemWidth.Add("Money", 2);
+        itemWidth.Add("Money", 1);
 
 
         itemHeight.Add("FirstRoomKey", 1);

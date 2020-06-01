@@ -8,6 +8,8 @@ public enum States
 {
     IDLE=0,
     RUN,
+    WALK,
+    HEAVY,
     PUSH,
     CLIME,
     COLLECT,
@@ -74,6 +76,9 @@ public class PlayerCharacterController : MonoBehaviour
         StateList.Add(States.DIE, GetComponent<PlayerDie>());
         StateList.Add(States.DOOR, GetComponent<PlayerDoor>());
         StateList.Add(States.DELAY, GetComponent<PlayerDelay>());
+        StateList.Add(States.WALK, GetComponent<PlayerWalk>());
+        StateList.Add(States.RUN, GetComponent<PlayerRun>());
+        StateList.Add(States.HEAVY, GetComponent<PlayerHeavyWalk>());
         stageStates.StateSpawn();
 
         anim = GetComponentInChildren<Animator>();

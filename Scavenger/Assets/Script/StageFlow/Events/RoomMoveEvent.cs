@@ -40,7 +40,7 @@ public class RoomMoveEvent : EventVisualParent
         if (!isHappened)
         {
             isHappened = true;
-            player.GetComponent<PlayerCharacterController>().SetState(States.IDLE);
+            player.GetComponent<PlayerCharacterController>().SetState(States.DELAY);
             player.GetComponent<PlayerCharacterController>().anim.SetInteger("Run", 1);
             
             Vector3 possessPos = usingCam.transform.position;
@@ -87,6 +87,7 @@ public class RoomMoveEvent : EventVisualParent
             temp = 2.0f;
             if (afterPlayerRotate)
                 player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, playerZpos);
+            player.GetComponent<PlayerCharacterController>().SetState(States.IDLE);
             manager.callEnd.Push(this);
         }
     }
