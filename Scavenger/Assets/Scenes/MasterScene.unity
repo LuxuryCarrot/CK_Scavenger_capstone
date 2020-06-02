@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307f5ad929157fb47a33685b347292cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlumPhone: {fileID: 0}
+  PlumPhone: {fileID: 2053172090}
 --- !u!1 &43666584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a702a4a3bc66044b6d5c4f785b3a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlumPhone: {fileID: 0}
+  PlumPhone: {fileID: 2053172090}
   Phone: 0
 --- !u!4 &468535434
 Transform:
@@ -5624,38 +5624,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1546481455}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &982334013
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 0
-  m_ColorFormat: 11
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &982692546
 GameObject:
   m_ObjectHideFlags: 0
@@ -8625,7 +8593,7 @@ MonoBehaviour:
   player: {fileID: 0}
   manager: {fileID: 0}
   isHappened: 0
-  playerMove: {x: 0, y: 0, z: 2}
+  playerMove: {x: 0, y: 0, z: -1.5}
   destiCam: {fileID: 1507738935}
   temp: 0
   afterPlayerRotate: 1
@@ -11120,6 +11088,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 85913427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2053172090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2049814318849813035, guid: 60186b999ca91454dab469e2b8e51446,
+    type: 3}
+  m_PrefabInstance: {fileID: 7850500}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2064040683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11425,7 +11399,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125070219}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
@@ -11434,7 +11408,7 @@ MonoBehaviour:
   overrideColor: 0
   overridingColor: {r: 0.9999, g: 0.9999, b: 0.9999, a: 0.9999}
   useShadow: 1
-  shadowMapRenderTexture: {fileID: 982334013}
+  shadowMapRenderTexture: {fileID: 0}
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
