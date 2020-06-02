@@ -58,7 +58,7 @@ public class PlayerRun : PlayerParent
         manager.moveDirection.y -= ySpeed;
         manager.m_Controller.Move(manager.moveDirection * Time.deltaTime);
 
-        if(Random.Range(0, 300)<=0.125f)
+        if((int)Random.Range(0, 600)<=1)
         {
             manager.anim.SetTrigger("RandomRun");
         }

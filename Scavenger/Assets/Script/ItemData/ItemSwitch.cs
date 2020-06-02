@@ -15,14 +15,16 @@ public class ItemSwitch : ItemParent
             if (sparks[i].activeInHierarchy)
             {
                 sparks[i].SetActive(false);
-                redBut.SetActive(true);
+                
             }
             else
             {
                 sparks[i].SetActive(true);
-                redBut.SetActive(false);
+                
             }
         }
+        if(redBut!=null)
+            redBut.SetActive(true);
         player.GetComponent<PlayerCharacterController>().isIterating = false;
     }
     private void Update()

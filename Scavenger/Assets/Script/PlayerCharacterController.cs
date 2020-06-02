@@ -83,7 +83,7 @@ public class PlayerCharacterController : MonoBehaviour
         StateList.Add(States.DOOR, GetComponent<PlayerDoor>());
         StateList.Add(States.DELAY, GetComponent<PlayerDelay>());
         StateList.Add(States.WALK, GetComponent<PlayerWalk>());
-        StateList.Add(States.RUN, GetComponent<PlayerRun>());
+        //StateList.Add(States.RUN, GetComponent<PlayerRun>());
         StateList.Add(States.HEAVY, GetComponent<PlayerHeavyWalk>());
         stageStates.StateSpawn();
 
@@ -188,6 +188,6 @@ public class PlayerCharacterController : MonoBehaviour
     public void TexTOut()
     {
         iterattext.gameObject.SetActive(true);
-        iterattext.text = "F를 길게 눌러 " + IteratScript.types;
+        iterattext.text = " 를 길게 눌러 " + IteratScript.types;
     }
 }

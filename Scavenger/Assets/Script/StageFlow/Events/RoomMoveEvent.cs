@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class RoomMoveEvent : EventVisualParent
 {
     
@@ -48,6 +49,7 @@ public class RoomMoveEvent : EventVisualParent
             Debug.Log("Possess");
             possessview = usingCam.fieldOfView;
             usingCam.gameObject.SetActive(false);
+            //usingCam.gameObject.GetComponent<>
             blendCam.gameObject.SetActive(true);
             blendCam.transform.position = possessPos;
             blendCam.fieldOfView = possessview;

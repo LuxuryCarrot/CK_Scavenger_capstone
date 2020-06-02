@@ -6,6 +6,7 @@ public class AnimGet : MonoBehaviour
 {
     public void DelayEnd()
     {
+        if(GetComponent<Animator>().GetInteger("Run")!=2)
         GetComponentInParent<PlayerCharacterController>().SetState(States.IDLE);
     }
     public void DoorEnd()

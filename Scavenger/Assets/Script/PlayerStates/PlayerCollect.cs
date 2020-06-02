@@ -35,7 +35,16 @@ public class PlayerCollect : PlayerParent
 
         manager.gageUI.fillAmount = getTime / manager.IteractItem.GetComponent<ItemLocker>().iteratTime;
 
-        if (Input.GetKeyUp(KeyCode.F))
+        if (!Input.GetKey(KeyCode.F) && getTime<=0.5f)
+        {
+            manager.anim.SetInteger("Run", 0);
+
+            manager.gageUI.enabled = false;
+
+            getTime = 0;
+            manager.SetState(States.IDLE);
+        }
+        else if(!Input.GetKey(KeyCode.F))
         {
             manager.anim.SetInteger("Run", 0);
 

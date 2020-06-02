@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/NOW2_400_233/Documents/Builds/Scavenger.exe
+C:/Users/NOW2_400_222/Desktop/새 폴더 (2)/Scavenger.exe
 SceneListBegin?
 Assets/UImake/Resources/Scenes/0_StartSplashScene.unity
 Assets/UImake/Resources/Scenes/1_MainScene.unity
@@ -42,7 +42,7 @@ af93f9c42e90877a9ba31e37adfd900c Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 218048bd93e908746781901d78cf0f9b Assembly-CSharp.dll:.CamDontClear
 5393ed520fc8f6ffc27d4ca046ece504 Assembly-CSharp.dll:AuraAPI.Aura
 87b58b8c1a6d6d39988e611bb09a4b16 Assembly-CSharp.dll:.ItemGet
-2af954ed7a14632f5f1782dec6cdd501 Assembly-CSharp.dll:.PlayerIdle
+69ab4800cb82165d18d9ee8e1b0d1f58 Assembly-CSharp.dll:.PlayerIdle
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -183,7 +183,7 @@ fcd5c3d576dfb26cbfb6f0bb6efb66ba Assembly-CSharp.dll:.MoveSceneTool
 8429f5e2e74458d387d20325476dffbf Assembly-CSharp.dll:.GunAim
 245bdb3eaffcd2a9f454ed40892b14a8 Assembly-CSharp.dll:.FixedInventoryManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-42eb7be13da05483f3735efebb52f7a1 Assembly-CSharp.dll:.PlumPhoneScript
+7509a75616de6be46f239c1d061f7b67 Assembly-CSharp.dll:.PlumPhoneScript
 204d8c61fdf2d7a43bcb9384ae624232 Assembly-CSharp.dll:.FadeInOut
 a4d879eed97e8d86fd752672fc026fa2 Assembly-CSharp.dll:AuraAPI.AutoMoveAndRotate
 dc0125fe40e14f036743e0b4b3f7a923 Assembly-CSharp.dll:.ItemMoveInst
@@ -226,7 +226,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 cb308c33d09477715e1a7d54947292b6 Assembly-CSharp.dll:.ChestSlotManager
 e18020555cd738c6166a5105bf9bca5d Assembly-CSharp.dll:.Stage1FirstEv
 a16664d6639d771511c91914b1dcac90 Assembly-CSharp.dll:.InGameUI
-546472b54df9a358e58e2851b3bd1dcb Assembly-CSharp.dll:.TurotialManager
+0543cb48201697cfc77f860daa953c70 Assembly-CSharp.dll:.TurotialManager
 a6206b15a1e8bc1821ad85abefb19daa Assembly-CSharp.dll:.PipeStraight
 87b58b8c1a6d6d39988e611bb09a4b16 Assembly-CSharp.dll:.ItemParent
 3cc7e5b5e5d8d74397a0914dc90ad3e9 Assembly-CSharp.dll:.EndStageManager
@@ -303,3 +303,4 @@ cb308c33d09477715e1a7d54947292b6 Assembly-CSharp.dll:.Poison
 47f29cd3029ae0fbf25f82de2127d90b Assembly-CSharp.dll:AuraAPI.GenerateComputeShaderKernelVariants
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.FadeIn
 8cf5d198def70a6754f4c419361a2d25 Assembly-CSharp.dll:AuraAPI.LightFlicker
+a8812f82b163ab06bf180dfeca9ddcc2 Assembly-CSharp.dll:.OperatorEvent

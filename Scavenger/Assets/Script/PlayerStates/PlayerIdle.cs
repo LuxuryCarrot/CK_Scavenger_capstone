@@ -7,6 +7,8 @@ public class PlayerIdle : PlayerParent
 {
     private float ySpeed;
     public bool stopMove;
+    public bool istriggered;
+    public float triggerTemp;
 
     public override void BeginState()
     {
@@ -15,6 +17,8 @@ public class PlayerIdle : PlayerParent
         if (InventoryManager.weight >= InventoryManager.weightLimit * 0.8f)
             manager.anim.SetInteger("Heavy", 1);
         stopMove = false;
+        istriggered = false;
+        triggerTemp = 0.0f;
     }
 
     private void Update()
@@ -22,15 +26,32 @@ public class PlayerIdle : PlayerParent
         if (!manager.Inventory.activeInHierarchy && !manager.ChestSlot.activeInHierarchy)
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-                manager.SetState(States.RUN);
+            {
+                if(manager.GetComponent<PlayerRun>()!=null)
+                  manager.SetState(States.RUN);
+                else
+                    manager.SetState(States.WALK);
+            }
         }
 
-        if (Random.Range(0, 300) <= 0.125f )
+        if ((int)Random.Range(0, 1200) <= 1 && !istriggered)
         {
+            istriggered = true;
             manager.anim.SetTrigger("Random");
             
             manager.anim.SetFloat("RandomSeed", Random.Range(0, 10));
         }
+
+        if(istriggered)
+        {
+            triggerTemp += Time.deltaTime;
+            if(triggerTemp>=5.0f)
+            {
+                triggerTemp = 0;
+                istriggered = false;
+            }
+        }
+
         //    if(manager.horizon)
         //      manager.moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f,0)/4;
         //    else

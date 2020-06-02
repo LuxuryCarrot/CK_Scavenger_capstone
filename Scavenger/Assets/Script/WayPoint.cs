@@ -41,6 +41,7 @@ public class WayPoint : MonoBehaviour
                     Vector3.Normalize(leftPoint.transform.position
                 - PlayerCharacterController.playerSingleton.transform.position);
             }
+
             else if(Vector3.Dot(PlayerCharacterController.playerSingleton.transform.position-transform.position,
                                   rightPos)>=0)
             {
@@ -50,6 +51,7 @@ public class WayPoint : MonoBehaviour
                 PlayerCharacterController.playerSingleton.leftPos =
                     -PlayerCharacterController.playerSingleton.rightPos;
             }
+
             else
             {
                 PlayerCharacterController.playerSingleton.leftPos =

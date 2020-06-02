@@ -9,10 +9,12 @@ public class TurotialManager : MonoBehaviour
     public PlayerCharacterController player;
     public GameObject inventory;
     public GameObject chest;
+    public GameObject moveTutorial;
 
     private void Awake()
     {
         Tutorial.SetActive(false);
+        moveTutorial.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacterController>();
         chest = GameObject.FindGameObjectWithTag("ChestSlot");
         inventory = GameObject.FindGameObjectWithTag("Inventory");
@@ -22,11 +24,12 @@ public class TurotialManager : MonoBehaviour
     {
         if(InfoInst.tutorial==0 && StageManager.current==StageState.IDLE)
         {
-            Tutorial.SetActive(true);
-            Tutorial.GetComponentInChildren<Text>().text = "A  D  로 이동 할 수 있습니다";
+            //Tutorial.SetActive(true);
+            moveTutorial.SetActive(true);
+            //moveTutorial.GetComponentInChildren<Text>().text = "A  D  로 이동 할 수 있습니다";
             if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
-                Tutorial.SetActive(false);
+                moveTutorial.SetActive(false);
                 InfoInst.tutorial++;
             }
         }
